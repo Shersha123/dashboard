@@ -14,7 +14,7 @@ function AdminDashboard() {
     try {
       const confirmdata = window.confirm(`Are you sure want to delete`);
       if (confirmdata) {
-        await axios.delete(`http://localhost:8000/remove-product/${id}`, {
+        await axios.delete(`https://crm-backend-eight.vercel.app/remove-product/${id}`, {
           headers: {
             authorization: `${window.localStorage.getItem("token")}`,
           },
@@ -26,7 +26,7 @@ function AdminDashboard() {
 
   let getProducts = async () => {
     try {
-      const products = await axios.get("http://localhost:8000/products", {
+      const products = await axios.get("https://crm-backend-eight.vercel.app/products", {
         headers: {
           authorization: `${window.localStorage.getItem("token")}`,
         },

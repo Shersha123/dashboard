@@ -42,7 +42,7 @@ function AddProduct() {
     onSubmit: async (value) => {
       try {
         setLoading(true);
-        await axios.post("http://localhost:8000/add-product", value, {
+        await axios.post("https://crm-backend-eight.vercel.app/add-product", value, {
           headers: {
             authorization: `${window.localStorage.getItem("token")}`,
           },

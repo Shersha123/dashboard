@@ -15,7 +15,7 @@ function ViewProduct() {
   let getProduct = async () => {
     try {
       const product = await axios.get(
-        `http://localhost:8000/get-product/${params.id}`
+        `https://crm-backend-eight.vercel.app/get-product/${params.id}`
       );
       setList(product.data);
       setLoading(false);

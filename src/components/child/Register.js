@@ -86,7 +86,7 @@ function Register() {
         setError(false);
         setLoading(true);
         const user = await axios.post(
-          "http://localhost:8000/register",
+          "https://crm-backend-eight.vercel.app/register",
           values
         );
         if (user.data.message == "register success") {

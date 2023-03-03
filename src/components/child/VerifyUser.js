@@ -12,7 +12,7 @@ function VerifyUser() {
   const verifyuser = async () => {
     try {
       await axios.post(
-        `http://localhost:8000/verify-user/${params.id}/${params.randomnum}`
+        `https://crm-backend-eight.vercel.app/verify-user/${params.id}/${params.randomnum}`
       );
       navigate(`/update-password/${params.id}`);
     } catch (error) {

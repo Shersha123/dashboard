@@ -29,7 +29,7 @@ function PasswordReset() {
     onSubmit: async (values) => {
       try {
         setLoading(true);
-        await axios.post("http://localhost:8000/sendpasswordlink", values);
+        await axios.post("https://crm-backend-eight.vercel.app/sendpasswordlink", values);
         setMessage(true);
         setEmail("");
         setHide(true);
